@@ -2,6 +2,7 @@
 > MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
 
 ![](https://img.shields.io/badge/version-1.0-blue.svg)
+![](https://img.shields.io/badge/system-routeros-important.svg)
 
 ## Change log 
 
