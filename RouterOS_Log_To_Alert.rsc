@@ -15,9 +15,9 @@ tool e-mail send server=$smtpServer port=$smtpPort from=$from to=$to cc=$cc subj
 
 #Here script starts 
 
-:local message "telnet"
+:local message #message
 :local systemName [/system identity get value-name=name]
-:local recipient 
+:local recipient #recipient
 :local logCount [/log print count-only where message~$message]
 :local logArray [/log find where message~$message]
 
@@ -26,7 +26,7 @@ tool e-mail send server=$smtpServer port=$smtpPort from=$from to=$to cc=$cc subj
 :if (logCount > 0) do={
 
     :log warning "..::Alert detected:..";
-    $SendEmail smtpServer="10.27.23.62" smtpPort=25 from=($systemName."@paccor.com") to=$recipient subject=($systemName." Triggered and Alert!") body=($logArray->1)
+    $SendEmail smtpServer=#SMTPIP smtpPort=Port from=($systemName."domain") to=$recipient subject=($systemName." Triggered and Alert!") body=($logArray->1)
     :log info ("..::Alert has been sent to ".$recipient)
 
 }
