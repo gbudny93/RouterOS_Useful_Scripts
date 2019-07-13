@@ -1,3 +1,7 @@
+# RouterOS Script
+# Copyright (c) Grzegorz Budny 
+# Filters logs to desired output for specified match  
+
 :global LogFilter do={
 
 :local message #message
