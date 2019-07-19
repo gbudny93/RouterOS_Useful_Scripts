@@ -13,19 +13,19 @@
     - RouterOS_Auto_Upgrade.rsc
       - in progress
     - RouterOS_Create_Directory.rsc
-      - Function that creates directory with specific name in RouterOS
+      - Creates directory with specific name in RouterOS
     - RouterOS_Log_Filtering.rsc
-      - Function that filters logs based on specified criteria: time or message and put in desired output
+      - Filters logs based on specified criteria: time or message and put in desired output
     - RouterOS_Log_To_Alert.rsc
-      - Fucntion that sends an email alert based on log message match
+      - Sends an email alert based on log message match
     - RouterOS_Send_Email.rsc
-      - Fucntion sending email via SMTP server with common email parameters as function parameters
+      - Sends email via SMTP server with common email parameters as function parameters
     - RouterOS_File_Logging.rsc
-      - Function that adds log entry if file was added or removed 
+      - Adds log entry if file was added or removed 
     - RouterOS_LCD_Change.rsc (Applies only to physical devices with LCD)
-      - Function that changes LCD mode from dark to light and vice versa based on schedule set up
+      - Changes LCD mode from dark to light and vice versa based on schedule set up
     - RouterOS_Low_Disk_Space.rsc
-      - Function sending email alert if disk space is under specified treshhold
+      - Sends email alert if disk space is under specified treshhold
     - RouterOS_File_Screening.rsc
       - in progress
     - RouterOS_Eth_Errors_Handling.rsc
