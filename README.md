@@ -1,12 +1,17 @@
 # RouterOS_Useful_Scripts
 > MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
 
-![](https://img.shields.io/badge/version-1.1-blue.svg)
 ![](https://img.shields.io/badge/scripting-routeros-important.svg)
 
 ## Change log 
 
-   - 7/19/2019 v1.1 update 
+   - 7/29/2019 
+      - RouterOS_Modulo.rsc
+        - Modulo operation
+      - RouterOS_Load_Script.rsc
+        - Loads RouterOS script to environment. If file is missing adds log entry 
+
+   - 7/19/2019 
       - FTP_Backup_Template.rsc
         - Schedules generation of *.backup* and *.rsc* file on RouterOS. Create FTP user dedicated for automatic backups. More on automatic RouterOS
       backups can be found under dedicated project: :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt)
@@ -33,7 +38,7 @@
      - RouterOS_Config_Check.rsc
        - in progress
 
-  - 6/14/2019 v1.0 first release
+  - 6/14/2019 first release
     - FTP_Backup_Template.rsc
       - Schedules generation of *.backup* and *.rsc* file on RouterOS. Create FTP user dedicated for automatic backups. More on automatic RouterOS
       backups can be found under dedicated project: :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt)
