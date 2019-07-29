@@ -11,7 +11,6 @@
     :set $reminder ($number - ($modulo * $truncated));
 
     :return $reminder
-
 }
 
 $Modulo number=5 modulo=2;
