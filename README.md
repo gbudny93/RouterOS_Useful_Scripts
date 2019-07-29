@@ -6,32 +6,32 @@
 
 ## Change log 
 
-- 7/19/2019 v1.1 update 
-    - FTP_Backup_Template.rsc
-      - Schedules generation of *.backup* and *.rsc* file on RouterOS. Create FTP user dedicated for automatic backups. More on automatic RouterOS
+   - 7/19/2019 v1.1 update 
+      - FTP_Backup_Template.rsc
+        - Schedules generation of *.backup* and *.rsc* file on RouterOS. Create FTP user dedicated for automatic backups. More on automatic RouterOS
       backups can be found under dedicated project: :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt)
-    - RouterOS_Auto_Upgrade.rsc
-      - in progress
-    - RouterOS_Create_Directory.rsc
-      - Creates directory with specific name in RouterOS
-    - RouterOS_Log_Filtering.rsc
-      - Filters logs based on specified criteria: time or message and put in desired output
-    - RouterOS_Log_To_Alert.rsc
-      - Sends an email alert based on log message match
-    - RouterOS_Send_Email.rsc
-      - Sends email via SMTP server with common email parameters as function parameters
-    - RouterOS_File_Logging.rsc
-      - Adds log entry if file was added or removed 
-    - RouterOS_LCD_Change.rsc (Applies only to physical devices with LCD)
-      - Changes LCD mode from dark to light and vice versa based on schedule set up
-    - RouterOS_Low_Disk_Space.rsc
-      - Sends email alert if disk space is under specified treshhold
-    - RouterOS_File_Screening.rsc
-      - in progress
-    - RouterOS_Eth_Errors_Handling.rsc
-     - in progress
-    - RouterOS_Config_Check.rsc
-      - in progress
+     - RouterOS_Auto_Upgrade.rsc
+       - in progress
+     - RouterOS_Create_Directory.rsc
+       - Creates directory with specific name in RouterOS
+     - RouterOS_Log_Filtering.rsc
+       - Filters logs based on specified criteria: time or message and put in desired output
+     - RouterOS_Log_To_Alert.rsc
+       - Sends an email alert based on log message match
+     - RouterOS_Send_Email.rsc
+       - Sends email via SMTP server with common email parameters as function parameters
+     - RouterOS_File_Logging.rsc
+       - Adds log entry if file was added or removed 
+     - RouterOS_LCD_Change.rsc (Applies only to physical devices with LCD)
+       - Changes LCD mode from dark to light and vice versa based on schedule set up
+     - RouterOS_Low_Disk_Space.rsc
+       - Sends email alert if disk space is under specified treshhold
+     - RouterOS_File_Screening.rsc
+       - in progress
+     - RouterOS_Eth_Errors_Handling.rsc
+       - in progress
+     - RouterOS_Config_Check.rsc
+       - in progress
 
   - 6/14/2019 v1.0 first release
     - FTP_Backup_Template.rsc
