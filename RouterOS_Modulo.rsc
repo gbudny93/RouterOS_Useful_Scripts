@@ -13,4 +13,4 @@
     :return $reminder
 }
 
-$Modulo number=5 modulo=2;
+$Modulo number=number_to_be_devided modulo=modulo_value;

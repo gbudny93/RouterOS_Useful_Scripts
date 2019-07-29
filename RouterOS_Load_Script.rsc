@@ -17,7 +17,7 @@
 
 }
 
-$LoadScript scriptName=testScript.rsc;
+$LoadScript scriptName=scriptName.rsc;
 
 
 

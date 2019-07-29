@@ -130,7 +130,7 @@ $ChangeLcd lightModeStartTime="08:00:00" darkModeStartTime="17:00:00";
 
 ### RouterOS_Low_Disk_Space.rsc
 
-> RouterOS function genersting mail alert if disk space is below defined treshhold.
+> RouterOS function generating mail alert if disk space is below defined treshhold.
 
 ```
 $LowDiskSpace treshhold=free_disk_space_in_%;
@@ -147,6 +147,20 @@ $LowDiskSpace treshhold=free_disk_space_in_%;
 ### RouterOS_Config_Check.rsc
 
 :soon: 
+
+### RouterOS_Modulo.rsc
+
+>Modulo function.
+
+```
+$Modulo number=number_to_be_devided modulo=modulo_value;
+```
+
+### RouterOS_Load_Script.rsc
+
+```
+$LoadScript scriptName=scriptName.rsc;
+```
 
 ## Authors
 
