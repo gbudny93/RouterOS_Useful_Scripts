@@ -5,6 +5,12 @@
 
 ## Change log 
 
+   - 8/3/2019
+      - RouterOS_String_Generator.rsc
+        - Generates 6 char string based on dictionary 
+      - RouterOS_Reset_Interface.rsc
+        - Resets interface if particular IP does not respond 
+
    - 7/29/2019 
       - RouterOS_Modulo.rsc
         - Modulo operation
@@ -160,6 +166,22 @@ $Modulo number=number_to_be_devided modulo=modulo_value;
 
 ```
 $LoadScript scriptName=scriptName.rsc;
+```
+
+### RouterOS_String_Generator.rsc
+
+> Generates 6 char string based on dictionary 
+
+```
+$GenerateString;
+```
+
+### RouterOS_Reset_Interface.rsc
+
+> Resets interface if particular IP does not respond 
+
+```
+$ResetInterface ipAddress=ipAddress_To_Monitor interfaceName=interface_name;
 ```
 
 ## Authors
