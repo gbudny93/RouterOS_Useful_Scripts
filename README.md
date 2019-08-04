@@ -2,6 +2,8 @@
 > MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
 
 ![](https://img.shields.io/badge/scripting-routeros-important.svg)
+![](https://img.shields.io/badge/mikrotik-routerBOARD-yellow)
+![](https://img.shields.io/badge/network-automation-informational)
 
 ## Change log 
 
@@ -64,8 +66,6 @@
   -  :white_check_mark: RouterOS v6.40 or higher
   -  :white_check_mark: MikroTik CRS or CCR with LCD for RouterOS_LCD_Change.rsc
   
-
-
 ## Usage
 
 > Use the following scripts to make your RouterOS management easier or use them in various larger scripts or projects 
