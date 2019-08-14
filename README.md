@@ -7,6 +7,10 @@
 
 ## Change log 
 
+   - 8/14/2019
+     - RouterOS_Auto_Upgrade.rsc
+       - Upgrades RouterOS if new package found when run 
+
    - 8/3/2019
       - RouterOS_String_Generator.rsc
         - Generates 6 char string based on dictionary 
