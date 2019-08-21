@@ -7,6 +7,10 @@
 
 ## Change log 
 
+   - 8/21/2019
+     - RouterOS_Script_Fetch.rsc
+       - Fetches script from git to RouterOS directory 
+
    - 8/14/2019
      - RouterOS_Auto_Upgrade.rsc
        - Upgrades RouterOS if new package found when run 
@@ -71,12 +75,10 @@
   -  :white_check_mark: MikroTik CRS or CCR with LCD for RouterOS_LCD_Change.rsc
   
 ## Usage
-
 > Use the following scripts to make your RouterOS management easier or use them in various larger scripts or projects 
 :+1: 
 
 ### FTP_Backup_Template.rsc
-
 > This script creates two files via RouterOS scheduler as well creates FTP user and group: 
   - *.backup* file 
   - *.rsc* file 
@@ -88,7 +90,6 @@ Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/
  :soon:
 
 ### RouterOS_Create_Directory.rsc
-
 > RouterOS function that creates directory with defined name in the system. Can be used just to create directory or be a part of larger project. 
 
 **Example**
@@ -97,7 +98,6 @@ Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/
 ```
 
 ### RouterOS_Log_Filtering.rsc
-
 > RouterOS function for log messages filtering based on message or time match stored in chosed output. 
 
 ```
@@ -105,7 +105,6 @@ $LogFilter;
 ```
 
 ### RouterOS_Log_To_Alert.rsc
-
  > RouterOS function sending mail alert if log entry matches message criteria.
 
  ```
@@ -114,7 +113,6 @@ recipient="recipient@example.com";
  ```
 
 ### RouterOS_Send_Email.rsc
-
 > RouterOS function to send email via SMTP server. Function contains all common email fields like *to*, *cc*, *subject*, *body* and more. Function can be called itself in RouterOS or by other script.
 
 **Example**
@@ -123,7 +121,6 @@ $SendEmail smtpServer=SMTPServer smtpPort=SMTPPort from=From to=To subject=Subje
 ```
 
 ### RouterOS_File_logging.rsc
-
 > RouterOS function adding log entry if file was added or removed.
 
 ```
@@ -131,7 +128,6 @@ $FileToLog;
 ```
 
 ### RouterOS_LCD_Change.rsc
-
 > RouterOS function changing LCD mode from dark to light and vice versa based on schedule setup.
 
 ```
@@ -141,7 +137,6 @@ $ChangeLcd lightModeStartTime="08:00:00" darkModeStartTime="17:00:00";
 ### RouterOS_Low_Disk_Space.rsc
 
 > RouterOS function generating mail alert if disk space is below defined treshhold.
-
 ```
 $LowDiskSpace treshhold=free_disk_space_in_%;
 ```
@@ -159,7 +154,6 @@ $LowDiskSpace treshhold=free_disk_space_in_%;
 :soon: 
 
 ### RouterOS_Modulo.rsc
-
 >Modulo function.
 
 ```
@@ -173,7 +167,6 @@ $LoadScript scriptName=scriptName.rsc;
 ```
 
 ### RouterOS_String_Generator.rsc
-
 > Generates 6 char string based on dictionary 
 
 ```
@@ -181,11 +174,22 @@ $GenerateString;
 ```
 
 ### RouterOS_Reset_Interface.rsc
-
 > Resets interface if particular IP does not respond 
 
 ```
 $ResetInterface ipAddress=ipAddress_To_Monitor interfaceName=interface_name;
+```
+
+### RouterOS_Script_Fetch.rsc
+> Fetches script from git to RouterOS directory
+
+```
+$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" 
+
+$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" isRun=true
+
+$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" isSchedule=true\
+interval="24" taskName="TaskName" startTime="startup"
 ```
 
 ## Authors
