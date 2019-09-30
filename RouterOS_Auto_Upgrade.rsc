@@ -4,6 +4,8 @@
 
 :global PackageAutoDownload do={
 
+    /system package update check-for-updates;
+
     :local packageCurrent [/system package update get installed-version];
     :local packageLatest [/system package update get latest-version];
     :local packageName [/system package get value-name=name number=0];
