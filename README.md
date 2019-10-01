@@ -5,7 +5,11 @@
 ![](https://img.shields.io/badge/mikrotik-routerBOARD-yellow)
 ![](https://img.shields.io/badge/network-automation-informational)
 
-## Change log 
+## Change log
+
+   - 10/1/2019
+     - RouterOS_Auto_Upgrade.rsc
+       - Fixed missing auto check for updates to get variables values at first
 
    - 8/21/2019
      - RouterOS_Script_Fetch.rsc
