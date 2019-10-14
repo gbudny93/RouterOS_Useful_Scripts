@@ -32,6 +32,11 @@
 
         :log info ("...:::No updates found. ".$packageCurrent." is the latest version...:::");
 
+        /tool e-mail send server=$smtpServer port=$smtpPort from=($systemName.$domain) \ 
+        to=$recipient subject=("No update available on ".$systemName) \ 
+        body=($systemName." has installed the latest package ".$packageLatest);
+       
+
     }
 }
 

@@ -4,28 +4,32 @@
 
 :global FetchScript do={
 
-    tool fetch mode=https http-method=get url=$url dst-path=($destinationPath."/".$destinationFileName);
+        :foreach url,destinationFileName in=$urls do={
 
-    :if($isRun)do={
+            /tool fetch mode=https http-method=get url=$url dst-path=($destinationPath."/".$destinationFileName);
+            :log info "...:::Scripts fetched:::...";
 
-        /system script run ($destinationPath.$destinationFileName);
+            :if ($isRun) do={
 
-    }
-    :if($isSchedule)do={
+                /system script run ($destinationPath.$destinationFileName);
+                :log info "...:::Script loaded to environment:::...";
 
-        /system scheduler \
-        add interval=($interval.h) name=$taskName on-event=("system script run ".($destinationPath."/".$destinationFileName)) \
-        policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon \
-        start-date=jan/01/1970 start-time=$startTime;
+            }
+            :if ($isSchedule) do={
 
+                /system scheduler \
+                add interval=($interval.h) name=$taskName on-event=("system script run ".($destinationPath."/".$destinationFileName)) \
+                policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon \
+                start-date=jan/01/1970 start-time=$startTime;
+                :log info "...:::Script joined to scheduler:::...";
+
+        }
     }
 }
 
-#$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" 
+#Example
+:global urlsBase {"URL1"="script1"; \
+                  "URL2"="script2"  \
+                 };
 
-#$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" isRun=true
-
-#$FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" isSchedule=true\
-#interval="24" taskName="TaskName" startTime="startup"
-
-
+$FetchScript urls=$urlsBase destinationPath="destinationPath" destinationFileName=$urlsBase;
