@@ -7,6 +7,14 @@
 
 ## Change log
 
+   - 10/14/2019
+    - RouterOS_Mail_Backup.rsc
+    - RouterOS_Cloud_Backup.rsc
+    - RouterOS_File_Screening.rsc
+    - RouterOS_Renew_License.rsc
+    - RouterOS_Script_Fetch.rsc - Update 
+    - RouterOS_Auto_Upgrade.rsc - Update/Clean ups   
+
    - 10/1/2019
      - RouterOS_Auto_Upgrade.rsc
        - Fixed missing auto check for updates to get variables values at first
