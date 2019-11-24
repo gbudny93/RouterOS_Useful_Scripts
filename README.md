@@ -7,6 +7,12 @@
 
 ## Change log
 
+   - 11/24/2019
+     - RouterOS_R_ARP.rsc
+     - RouterOS_Format_Drive.rsc
+     - RouterOS_Substring_Variable.rsc
+     - RouterOS_System_Status.rsc
+
    - 10/14/2019
      - RouterOS_Mail_Backup.rsc
      - RouterOS_Cloud_Backup.rsc
