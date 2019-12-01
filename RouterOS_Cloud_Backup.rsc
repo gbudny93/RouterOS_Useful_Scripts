@@ -1,6 +1,6 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
-# Create new backup file and uploads it to cloud
+# Creates new backup file and uploads it to MikroTik Cloud
 
 :global CloudBackup do={
 
@@ -20,3 +20,5 @@
 
     }
 }
+
+$CloudBackup smtpServer=smtpServer smtpPort=smtpPort domain=@example.com recipient=recipient@example.com;

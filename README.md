@@ -1,5 +1,5 @@
 # RouterOS_Useful_Scripts
-> MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
+> MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. Check also another repository with scripts related strcitly to MikroTik CAPsMAN automation :link: [CAPsMAN Automation Scripts](https://github.com/gbudny93/MikroTik_CAPsMAN_Automation).
 
 ![](https://img.shields.io/badge/scripting-routeros-important.svg)
 ![](https://img.shields.io/badge/mikrotik-routerBOARD-yellow)
@@ -92,7 +92,7 @@
   -  :white_check_mark: RouterOS v6.40 or higher
   -  :white_check_mark: MikroTik CRS or CCR with LCD for RouterOS_LCD_Change.rsc
   
-## Usage
+## How to use
 > Use the following scripts to make your RouterOS management easier or use them in various larger scripts or projects 
 :+1: 
 
@@ -104,20 +104,35 @@
 Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt) project.
 
 ### RouterOS_Auto_Upgrade.rsc
+> Checks if latest package is available. Downloads it, installs and sends email notification 
 
- :soon:
+**Example** 
+```
+$PackageAutoDownload userName=userName password=password packagePath=path \
+smtpServer=ipAddress smtpPort=poty domain=@example.com \
+recipient=recipient@example.com;
+```
+
+### RouterOS_Cloud_Backup.rsc
+> Creates new backup file and uploads it to MikroTik Cloud
+
+**Example**
+```
+$CloudBackup smtpServer=smtpServer smtpPort=smtpPort domain=@example.com recipient=recipient@example.com;
+```
 
 ### RouterOS_Create_Directory.rsc
 > RouterOS function that creates directory with defined name in the system. Can be used just to create directory or be a part of larger project. 
 
 **Example**
- ```rascal
- $CreateDirecotry userName=UserName password=Password directoryName=DirectoryName
+ ```
+ $CreateDirecotry userName=UserName password=Password directoryName=DirectoryName;
 ```
 
 ### RouterOS_Log_Filtering.rsc
-> RouterOS function for log messages filtering based on message or time match stored in chosed output. 
+> RouterOS function for log messages filtering based on message or time match stored in chosen output. 
 
+**Example**
 ```
 $LogFilter;
 ```
@@ -125,6 +140,7 @@ $LogFilter;
 ### RouterOS_Log_To_Alert.rsc
  > RouterOS function sending mail alert if log entry matches message criteria.
 
+**Example**
  ```
  $LogToAlert message="message" fileName="fileName" smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" \ 
 recipient="recipient@example.com";
@@ -135,12 +151,13 @@ recipient="recipient@example.com";
 
 **Example**
 ```
-$SendEmail smtpServer=SMTPServer smtpPort=SMTPPort from=From to=To subject=Subject body=Body
+$SendEmail smtpServer=SMTPServer smtpPort=SMTPPort from=From to=To subject=Subject body=Body;
 ```
 
-### RouterOS_File_logging.rsc
+### RouterOS_File_Logging.rsc
 > RouterOS function adding log entry if file was added or removed.
 
+**Example**
 ```
 $FileToLog;
 ```
@@ -148,38 +165,72 @@ $FileToLog;
 ### RouterOS_LCD_Change.rsc
 > RouterOS function changing LCD mode from dark to light and vice versa based on schedule setup.
 
+**Example**
 ```
 $ChangeLcd lightModeStartTime="08:00:00" darkModeStartTime="17:00:00";
 ```
 
 ### RouterOS_Low_Disk_Space.rsc
-
 > RouterOS function generating mail alert if disk space is below defined treshhold.
+
+**Example**
 ```
 $LowDiskSpace treshhold=free_disk_space_in_%;
 ```
 
+### RouterOS_Mail_Backup.rsc
+> Creates RouterOS backup and config file and sends them via email
+
+**Example**
+```
+$MailBackup configName=configName backupName=backupName smtpServer=smtpServer smtpPort=smtpPort domain=@example.com \
+recipient=recipient@example.com;
+```
+
 ### RouterOS_File_Screening.rsc
+> Removes files by specific name or file extansion 
 
-:soon: 
+**Example**
+```
+$FileScreening keyWord=".txt";
+```
 
-### RouterOS_Eth_Errors_Handling.rsc
+### RouterOS_Format_Drive.rsc
+> Formats RouterOS additional drive
 
-:soon:
-
-### RouterOS_Config_Check.rsc
-
-:soon: 
+**Example**
+```
+$FormatDrive drive=0 fileSystem=ext3 label=data; 
+```
 
 ### RouterOS_Modulo.rsc
 >Modulo function.
 
+**Example**
 ```
 $Modulo number=number_to_be_devided modulo=modulo_value;
 ```
 
-### RouterOS_Load_Script.rsc
+### RouterOS_R_ARP.rsc
+> ARP/RARP Function (shortange syntax) 
 
+**Example**
+```
+$R_ARP mode=mode;
+```
+
+### RouterOS_Renew_License.rsc
+> Renews RouterOS License 
+
+**Example**
+```
+$RenewLicense account=account password=password level=level;
+```
+
+### RouterOS_Load_Script.rsc
+> Loads function to RouterOS environment
+
+**Example**
 ```
 $LoadScript scriptName=scriptName.rsc;
 ```
@@ -187,6 +238,7 @@ $LoadScript scriptName=scriptName.rsc;
 ### RouterOS_String_Generator.rsc
 > Generates 6 char string based on dictionary 
 
+**Example**
 ```
 $GenerateString;
 ```
@@ -194,6 +246,7 @@ $GenerateString;
 ### RouterOS_Reset_Interface.rsc
 > Resets interface if particular IP does not respond 
 
+**Example**
 ```
 $ResetInterface ipAddress=ipAddress_To_Monitor interfaceName=interface_name;
 ```
@@ -201,6 +254,7 @@ $ResetInterface ipAddress=ipAddress_To_Monitor interfaceName=interface_name;
 ### RouterOS_Script_Fetch.rsc
 > Fetches script from git to RouterOS directory
 
+**Example**
 ```
 $FetchScript url="https://example.repo.com" destinationPath="FolderName" destinationFileName="ScriptName" 
 
@@ -210,13 +264,16 @@ $FetchScript url="https://example.repo.com" destinationPath="FolderName" destina
 interval="24" taskName="TaskName" startTime="startup"
 ```
 
+### RouterOS_Substring_Variable.rsc
+> Substrings variable 
+
+**Example**
+```
+$Substring findMode=true string="string" signA="A" signB "b";
+```
+
+### More scripts comming soon :) 
+
 ## Authors
 
   - Grzegorz Budny
-
-
-
-
-  
-  
-

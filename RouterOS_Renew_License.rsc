@@ -13,3 +13,5 @@
 
     }
 }
+
+$RenewLicense account=account password=password level=level;

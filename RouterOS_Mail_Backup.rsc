@@ -1,6 +1,6 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
-# Creates backup and config file and sends them via email
+# Creates RouterOS backup and config file and sends them via email
 
 :global MailBackup do={
 

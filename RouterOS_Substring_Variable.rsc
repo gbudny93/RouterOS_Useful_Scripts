@@ -1,6 +1,6 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
-# Substring variable 
+# Substrings variable 
 
 :global Subtring do={
 
