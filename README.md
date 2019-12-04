@@ -7,6 +7,10 @@
 
 ## Change log
 
+   - 12/4/2019
+     - RouterOS_Auto_Firmware_Upgrade.rsc
+     - RouterOS_Port_Knock.rsc
+
    - 11/24/2019
      - RouterOS_R_ARP.rsc
      - RouterOS_Format_Drive.rsc
@@ -103,7 +107,16 @@
   
 Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt) project.
 
-### RouterOS_Auto_Upgrade.rsc
+### RouterOS_Auto_Firmware_Upgrade.rsc
+> Checks if latest firmware is available. Installs it and sends email notification 
+
+**Example**
+```
+$AutoFirmwareUpgrade smtpServer=smtpServer smtpPort=smtpPort domain=example.com \
+recipient=recipient@example.com;
+```
+
+### RouterOS_Auto_Software_Upgrade.rsc
 > Checks if latest package is available. Downloads it, installs and sends email notification 
 
 **Example** 
@@ -209,6 +222,18 @@ $FormatDrive drive=0 fileSystem=ext3 label=data;
 **Example**
 ```
 $Modulo number=number_to_be_devided modulo=modulo_value;
+```
+
+### RouterOS_Port_Knock.rsc
+> Port Knock from RouterOS
+
+**Example**
+```
+:global knockBase {"sourceIP1"="port23"; \
+                   "sourceIP2"="port22"  \
+                  };
+
+$PortKnock base=$knockBase destinationAddress=destinationIP;
 ```
 
 ### RouterOS_R_ARP.rsc
