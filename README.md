@@ -8,6 +8,10 @@
 ## Change log
 
    - 12/4/2019
+     - RouterOS_RadiusMonitor.rsc
+     - RouterOS_User_Alerts.rsc
+
+   - 12/4/2019
      - RouterOS_Auto_Firmware_Upgrade.rsc
      - RouterOS_Port_Knock.rsc
 
@@ -244,6 +248,14 @@ $PortKnock base=$knockBase destinationAddress=destinationIP;
 $R_ARP mode=mode;
 ```
 
+### RouterOS_Radius_Monitor.rsc
+> Sends Radius statistics via email
+
+**Example**
+```
+$RadiusMonitor smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" recipient="recipient@example.com";
+```
+
 ### RouterOS_Renew_License.rsc
 > Renews RouterOS License 
 
@@ -295,6 +307,15 @@ interval="24" taskName="TaskName" startTime="startup"
 **Example**
 ```
 $Substring findMode=true string="string" signA="A" signB "b";
+```
+
+### RouterOS_User_alert.rsc
+> After defined number of logon failure attempts in 1 hour sends email alert and blocks source IP on firewall
+
+**Example**
+```
+$UserAlert message="message" treshhold=3 fileName="fileName" smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" \ 
+recipient="recipient@example.com";
 ```
 
 ### More scripts comming soon :) 
