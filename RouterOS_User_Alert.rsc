@@ -16,7 +16,7 @@
 
     :if ($logCount > $treshhold) do={
         
-        :set $logArray [/log find where message~$logMessage time~"10"];
+        :set $logArray [/log find where message~$logMessage time~$hour];
         :toarray value=$logArray;
         :set logFoundCount [:len value=$logArray];
 
