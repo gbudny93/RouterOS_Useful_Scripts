@@ -1,5 +1,7 @@
 # RouterOS_Useful_Scripts
-> MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. Check also another repository with scripts related strcitly to MikroTik CAPsMAN automation :link: [CAPsMAN Automation Scripts](https://github.com/gbudny93/MikroTik_CAPsMAN_Automation).
+> MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
+**Check also another repository with scripts related strictly to MikroTik CAPsMAN automation :link: [CAPsMAN Automation Scripts](https://github.com/gbudny93/MikroTik_CAPsMAN_Automation).**
+**Here you can find script template that I use :link: [RouterOS_Script_Template](https://gist.github.com/gbudny93/8ad0899576407e5efe9323febb368796).**
 
 ![](https://img.shields.io/badge/scripting-routeros-important.svg)
 ![](https://img.shields.io/badge/mikrotik-routerBOARD-yellow)
