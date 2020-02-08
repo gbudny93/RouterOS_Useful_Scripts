@@ -1,5 +1,7 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
+# Version 1.0 
+# Last update: 2/8/2020
 # After defined number of logon failure attempts in 1 hour sends email alert and blocks source IP on firewall
 
 :global UserAlert do={

@@ -1,5 +1,7 @@
 # RouterOS Script
 # Copyright (c) Grzegorz Budny 
+# Version 1.0 
+# Last update: 2/8/2020
 # Renews RouterOS License 
 
 :global RenewLicense do={

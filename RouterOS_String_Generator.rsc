@@ -1,5 +1,7 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
+# Version 1.0 
+# Last update: 2/8/2020
 # Generates random string based on dictionary of six chars length
 
 :global GenerateString do={

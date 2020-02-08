@@ -1,5 +1,7 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
+# Version 1.0 
+# Last update: 2/8/2020
 # Removes files by specific name or file extansion 
 
 :global FileScreening do={

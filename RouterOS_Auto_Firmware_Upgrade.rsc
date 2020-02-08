@@ -1,5 +1,7 @@
 # RouterOS Fucntion 
-# Copyright (c) Grzegorz Budny 
+# Copyright (c) Grzegorz Budny
+# Version 1.0 
+# Last update: 2/8/2020
 # Checks if latest firmware is available. Installs it and sends email notification 
 
 :global AutoFirmwareUpgrade do={

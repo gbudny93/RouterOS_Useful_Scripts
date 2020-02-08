@@ -1,5 +1,7 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
+# Version 1.0 
+# Last update: 2/8/2020
 # Adds log entry if file is removed or added 
 
 :global FileToLog do={
