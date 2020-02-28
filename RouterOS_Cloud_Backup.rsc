@@ -1,13 +1,13 @@
 # RouterOS Function
 # Copyright (c) Grzegorz Budny 
-# Version 1.0 
-# Last update: 2/8/2020
+# Version 1.1 
+# Last update: 2/14/2020
 # Creates new backup file and uploads it to MikroTik Cloud
 
 :global CloudBackup do={
 
     :local systemLicense [/system license get value-name=level];
-    :local systemName [/system identity get name];
+    :local systemName [/system identity get value-name=name];
 
     :if ($currentLicenseLevel != "free") do={
 
