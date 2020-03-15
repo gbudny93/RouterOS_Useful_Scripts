@@ -9,6 +9,13 @@
 
 ## Change log
 
+   - 15/4/2020
+     - RouterOS_Cloud_Backup.rsc
+     - RouterOS_FTP_Backup.rsc
+     - RouterOS_Function_Template.rsc
+     - RouterOS_PPP_Disconnect_Active_Sessions.rsc
+     - RouterOS_Recreate_Bridge.rsc
+
    - 12/4/2019
      - RouterOS_RadiusMonitor.rsc
      - RouterOS_User_Alerts.rsc
@@ -137,7 +144,7 @@ recipient=recipient@example.com;
 
 **Example**
 ```
-$CloudBackup smtpServer=smtpServer smtpPort=smtpPort domain=@example.com recipient=recipient@example.com;
+$CloudBackup password=password;
 ```
 
 ### RouterOS_Create_Directory.rsc
@@ -319,6 +326,29 @@ $Substring findMode=true string="string" signA="A" signB "b";
 $UserAlert message="message" treshhold=3 fileName="fileName" smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" \ 
 recipient="recipient@example.com";
 ```
+
+### RouterOS_FTP_Backup.rsc
+> Creates backup files and sends them via FTP to FTP server
+
+**Example**
+```
+$FTPBackup configName=configName backupName=backupName smtpServer=smtpServer smtpPort=smtpPort domain=@example.com \
+recipient=recipient@example.com destPath=destPath ftpUser=user ftpPassword=password ftpServer=ftpserver;
+```
+
+### RouterOS_Function_Template.rsc
+> Function template that I use
+
+### RouterOS_PPP_Disconnect_Active_Sessions.rsc
+> Disconnects all PPP active sessions at once
+
+**Example**
+```
+$DisconnectPPPActveSessions;
+```
+
+### RouterOS_Recreate_Bridge.rsc
+> Recreates bridge if broken or misconfigured 
 
 ### More scripts comming soon :) 
 
