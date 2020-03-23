@@ -9,7 +9,12 @@
 
 ## Change log
 
-   - 15/4/2020
+   - 23/3/2020
+     - RouterOS_Config_Fetch.rsc
+     - RouterOS_Measure_Execution_Time.rsc
+     - RouterOS_RB750GR3_DUDE_Setup.rsc
+
+   - 15/2/2020
      - RouterOS_Cloud_Backup.rsc
      - RouterOS_FTP_Backup.rsc
      - RouterOS_Function_Template.rsc
