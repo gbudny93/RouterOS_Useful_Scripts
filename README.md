@@ -1,4 +1,4 @@
-# RouterOS_Useful_Scripts
+## RouterOS_Useful_Scripts
 > MikroTik RouterOS Scripts for various use and shared among different projects. Repository contains ready to use scripts as well functions ready to use in larger projects. 
 **Check also another repository with scripts related strictly to MikroTik CAPsMAN automation :link: [CAPsMAN Automation Scripts](https://github.com/gbudny93/MikroTik_CAPsMAN_Automation).**
 **Here you can find script template that I use :link: [RouterOS_Script_Template](https://gist.github.com/gbudny93/8ad0899576407e5efe9323febb368796).**
@@ -7,7 +7,11 @@
 ![](https://img.shields.io/badge/mikrotik-routerBOARD-yellow)
 ![](https://img.shields.io/badge/network-automation-informational)
 
-## Change log
+#### Change log
+
+   - 4/19/2020
+     - RouterOS_All_Software_Download.rsc
+     - RouterOS_Dual_WAN_Failover.rsc
 
    - 23/3/2020
      - RouterOS_Config_Fetch.rsc
@@ -109,23 +113,26 @@
     - RouterOS_Send_Email.rsc
       - Fucntion sending email via SMTP server with common email parameters as function parameters
     
-## Prerequisites
+### Prerequisites
 
   -  :white_check_mark: RouterOS v6.40 or higher
   -  :white_check_mark: MikroTik CRS or CCR with LCD for RouterOS_LCD_Change.rsc
   
-## How to use
+### How to use
 > Use the following scripts to make your RouterOS management easier or use them in various larger scripts or projects 
 :+1: 
 
-### FTP_Backup_Template.rsc
+#### FTP_Backup_Template.rsc
 > This script creates two files via RouterOS scheduler as well creates FTP user and group: 
   - *.backup* file 
   - *.rsc* file 
   
 Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/Backup_mt) project.
 
-### RouterOS_Auto_Firmware_Upgrade.rsc
+#### RouterOS_All_Software_Download.rsc
+> Automated download of all latest RouterOS standard packages. Tool recommended for CAPsMANs and DUDE servers
+
+#### RouterOS_Auto_Firmware_Upgrade.rsc
 > Checks if latest firmware is available. Installs it and sends email notification 
 
 **Example**
@@ -134,7 +141,7 @@ $AutoFirmwareUpgrade smtpServer=smtpServer smtpPort=smtpPort domain=example.com 
 recipient=recipient@example.com;
 ```
 
-### RouterOS_Auto_Software_Upgrade.rsc
+#### RouterOS_Auto_Software_Upgrade.rsc
 > Checks if latest package is available. Downloads it, installs and sends email notification 
 
 **Example** 
@@ -144,7 +151,7 @@ smtpServer=ipAddress smtpPort=poty domain=@example.com \
 recipient=recipient@example.com;
 ```
 
-### RouterOS_Cloud_Backup.rsc
+#### RouterOS_Cloud_Backup.rsc
 > Creates new backup file and uploads it to MikroTik Cloud
 
 **Example**
@@ -152,7 +159,7 @@ recipient=recipient@example.com;
 $CloudBackup password=password;
 ```
 
-### RouterOS_Create_Directory.rsc
+#### RouterOS_Create_Directory.rsc
 > RouterOS function that creates directory with defined name in the system. Can be used just to create directory or be a part of larger project. 
 
 **Example**
@@ -160,7 +167,10 @@ $CloudBackup password=password;
  $CreateDirecotry userName=UserName password=Password directoryName=DirectoryName;
 ```
 
-### RouterOS_Log_Filtering.rsc
+#### RouterOS_Dual_WAN_Failover.rsc
+> Simple setup for DUAL WAN failover. Main WAN must be commented as WAN1. Secondary WAN must be commented as WAN2
+
+#### RouterOS_Log_Filtering.rsc
 > RouterOS function for log messages filtering based on message or time match stored in chosen output. 
 
 **Example**
@@ -168,7 +178,7 @@ $CloudBackup password=password;
 $LogFilter;
 ```
 
-### RouterOS_Log_To_Alert.rsc
+#### RouterOS_Log_To_Alert.rsc
  > RouterOS function sending mail alert if log entry matches message criteria.
 
 **Example**
@@ -177,7 +187,7 @@ $LogFilter;
 recipient="recipient@example.com";
  ```
 
-### RouterOS_Send_Email.rsc
+#### RouterOS_Send_Email.rsc
 > RouterOS function to send email via SMTP server. Function contains all common email fields like *to*, *cc*, *subject*, *body* and more. Function can be called itself in RouterOS or by other script.
 
 **Example**
@@ -185,7 +195,7 @@ recipient="recipient@example.com";
 $SendEmail smtpServer=SMTPServer smtpPort=SMTPPort from=From to=To subject=Subject body=Body;
 ```
 
-### RouterOS_File_Logging.rsc
+#### RouterOS_File_Logging.rsc
 > RouterOS function adding log entry if file was added or removed.
 
 **Example**
@@ -193,7 +203,7 @@ $SendEmail smtpServer=SMTPServer smtpPort=SMTPPort from=From to=To subject=Subje
 $FileToLog;
 ```
 
-### RouterOS_LCD_Change.rsc
+#### RouterOS_LCD_Change.rsc
 > RouterOS function changing LCD mode from dark to light and vice versa based on schedule setup.
 
 **Example**
@@ -201,7 +211,7 @@ $FileToLog;
 $ChangeLcd lightModeStartTime="08:00:00" darkModeStartTime="17:00:00";
 ```
 
-### RouterOS_Low_Disk_Space.rsc
+#### RouterOS_Low_Disk_Space.rsc
 > RouterOS function generating mail alert if disk space is below defined treshhold.
 
 **Example**
@@ -209,7 +219,7 @@ $ChangeLcd lightModeStartTime="08:00:00" darkModeStartTime="17:00:00";
 $LowDiskSpace treshhold=free_disk_space_in_%;
 ```
 
-### RouterOS_Mail_Backup.rsc
+#### RouterOS_Mail_Backup.rsc
 > Creates RouterOS backup and config file and sends them via email
 
 **Example**
@@ -218,7 +228,7 @@ $MailBackup configName=configName backupName=backupName smtpServer=smtpServer sm
 recipient=recipient@example.com;
 ```
 
-### RouterOS_File_Screening.rsc
+#### RouterOS_File_Screening.rsc
 > Removes files by specific name or file extansion 
 
 **Example**
@@ -226,7 +236,7 @@ recipient=recipient@example.com;
 $FileScreening keyWord=".txt";
 ```
 
-### RouterOS_Format_Drive.rsc
+#### RouterOS_Format_Drive.rsc
 > Formats RouterOS additional drive
 
 **Example**
@@ -234,7 +244,7 @@ $FileScreening keyWord=".txt";
 $FormatDrive drive=0 fileSystem=ext3 label=data; 
 ```
 
-### RouterOS_Modulo.rsc
+#### RouterOS_Modulo.rsc
 >Modulo function.
 
 **Example**
@@ -242,7 +252,7 @@ $FormatDrive drive=0 fileSystem=ext3 label=data;
 $Modulo number=number_to_be_devided modulo=modulo_value;
 ```
 
-### RouterOS_Port_Knock.rsc
+#### RouterOS_Port_Knock.rsc
 > Port Knock from RouterOS
 
 **Example**
@@ -254,7 +264,7 @@ $Modulo number=number_to_be_devided modulo=modulo_value;
 $PortKnock base=$knockBase destinationAddress=destinationIP;
 ```
 
-### RouterOS_R_ARP.rsc
+#### RouterOS_R_ARP.rsc
 > ARP/RARP Function (shortange syntax) 
 
 **Example**
@@ -262,7 +272,7 @@ $PortKnock base=$knockBase destinationAddress=destinationIP;
 $R_ARP mode=mode;
 ```
 
-### RouterOS_Radius_Monitor.rsc
+#### RouterOS_Radius_Monitor.rsc
 > Sends Radius statistics via email
 
 **Example**
@@ -270,7 +280,7 @@ $R_ARP mode=mode;
 $RadiusMonitor smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" recipient="recipient@example.com";
 ```
 
-### RouterOS_Renew_License.rsc
+#### RouterOS_Renew_License.rsc
 > Renews RouterOS License 
 
 **Example**
@@ -278,7 +288,7 @@ $RadiusMonitor smtpServer=smtpServer smtpPort=smtpPort domain="@example.com" rec
 $RenewLicense account=account password=password level=level;
 ```
 
-### RouterOS_Load_Script.rsc
+#### RouterOS_Load_Script.rsc
 > Loads function to RouterOS environment
 
 **Example**
@@ -286,7 +296,7 @@ $RenewLicense account=account password=password level=level;
 $LoadScript scriptName=scriptName.rsc;
 ```
 
-### RouterOS_String_Generator.rsc
+#### RouterOS_String_Generator.rsc
 > Generates 6 char string based on dictionary 
 
 **Example**
@@ -294,7 +304,7 @@ $LoadScript scriptName=scriptName.rsc;
 $GenerateString;
 ```
 
-### RouterOS_Reset_Interface.rsc
+#### RouterOS_Reset_Interface.rsc
 > Resets interface if particular IP does not respond 
 
 **Example**
@@ -302,7 +312,7 @@ $GenerateString;
 $ResetInterface ipAddress=ipAddress_To_Monitor interfaceName=interface_name;
 ```
 
-### RouterOS_Script_Fetch.rsc
+#### RouterOS_Script_Fetch.rsc
 > Fetches script from git to RouterOS directory
 
 **Example**
@@ -315,7 +325,7 @@ $FetchScript url="https://example.repo.com" destinationPath="FolderName" destina
 interval="24" taskName="TaskName" startTime="startup"
 ```
 
-### RouterOS_Substring_Variable.rsc
+#### RouterOS_Substring_Variable.rsc
 > Substrings variable 
 
 **Example**
@@ -323,7 +333,7 @@ interval="24" taskName="TaskName" startTime="startup"
 $Substring findMode=true string="string" signA="A" signB "b";
 ```
 
-### RouterOS_User_alert.rsc
+#### RouterOS_User_alert.rsc
 > After defined number of logon failure attempts in 1 hour sends email alert and blocks source IP on firewall
 
 **Example**
@@ -332,7 +342,7 @@ $UserAlert message="message" treshhold=3 fileName="fileName" smtpServer=smtpServ
 recipient="recipient@example.com";
 ```
 
-### RouterOS_FTP_Backup.rsc
+#### RouterOS_FTP_Backup.rsc
 > Creates backup files and sends them via FTP to FTP server
 
 **Example**
@@ -341,10 +351,10 @@ $FTPBackup configName=configName backupName=backupName smtpServer=smtpServer smt
 recipient=recipient@example.com destPath=destPath ftpUser=user ftpPassword=password ftpServer=ftpserver;
 ```
 
-### RouterOS_Function_Template.rsc
+#### RouterOS_Function_Template.rsc
 > Function template that I use
 
-### RouterOS_PPP_Disconnect_Active_Sessions.rsc
+#### RouterOS_PPP_Disconnect_Active_Sessions.rsc
 > Disconnects all PPP active sessions at once
 
 **Example**
@@ -352,11 +362,11 @@ recipient=recipient@example.com destPath=destPath ftpUser=user ftpPassword=passw
 $DisconnectPPPActveSessions;
 ```
 
-### RouterOS_Recreate_Bridge.rsc
+#### RouterOS_Recreate_Bridge.rsc
 > Recreates bridge if broken or misconfigured 
 
-### More scripts comming soon :) 
+#### More scripts comming soon :) 
 
-## Authors
+### Authors
 
   - Grzegorz Budny
