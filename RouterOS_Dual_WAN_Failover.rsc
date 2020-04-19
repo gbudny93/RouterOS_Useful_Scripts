@@ -2,7 +2,7 @@
 # Copyright (c) Grzegorz Budny 
 # Version 1.0 
 # Last update: 4/19/2020
-# Simple setup for DUAL WAN failover. Main WAN must be commented as WAN1. Secondary WAN must be commented as WAn2
+# Simple setup for DUAL WAN failover. Main WAN must be commented as WAN1. Secondary WAN must be commented as WAN2
 
 :global DualWanFailover do={
 
