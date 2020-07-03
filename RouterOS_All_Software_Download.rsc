@@ -1,7 +1,7 @@
 # RouterOS Fucntion 
 # Copyright (c) Grzegorz Budny
-# Version 1.0 
-# Last update: 4/19/20
+# Version 1.1 
+# Last update: 2020-07-03 10:07:02
 # Automated download of all latest RouterOS standard packages. 
 # Tool recommended to CAPsMAN and DUDE servers
 
@@ -16,7 +16,7 @@
     :foreach package in=$packages do={
 
         /tool fetch http-method=get mode=https url=("https://download.mikrotik.com/routeros/".$packageLatest."/routeros-".("$package")."-".$packageLatest.".npk") dst-path=($destinationPath."/routeros-".("$package")."-".$packageLatest.".npk");
-        :log ("...:::Downloading "."/routeros-".("$package")."-".$packageLatest.".npk");
+        :log info ("...:::Downloading "."/routeros-".("$package")."-".$packageLatest.".npk");
         
     }
 }
