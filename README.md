@@ -8,6 +8,9 @@
 ![](https://img.shields.io/badge/network-automation-informational)
 
 #### Change log
+   - 7/3/2020
+     - RouterOS_All_Software_Download.rsc - typos fix 
+     - RouterOS_Array_Append.rsc 
 
    - 4/19/2020
      - RouterOS_All_Software_Download.rsc
@@ -131,6 +134,9 @@ Script is a part of  :link: [Backup_mt by gbudny93](https://github.com/gbudny93/
 
 #### RouterOS_All_Software_Download.rsc
 > Automated download of all latest RouterOS standard packages. Tool recommended for CAPsMANs and DUDE servers
+
+### RouterOS_Array_Append.rsc 
+> Wrapper to append array elements
 
 #### RouterOS_Auto_Firmware_Upgrade.rsc
 > Checks if latest firmware is available. Installs it and sends email notification 
